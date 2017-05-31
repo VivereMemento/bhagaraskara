@@ -1,0 +1,77 @@
+$responsive: true;
+
+/* --------- variables --------- */
+$EL: 'existence-light', sans-serif;
+$LR: 'lato-regular', sans-serif;
+$LB: 'lato-bold', sans-serif;
+$OR: 'opensans-regular', sans-serif;
+$OB: 'opensans-bold', sans-serif;
+
+$gray: #555555;
+$gray-light: #8c8c8c;
+$black: #000000;
+
+/* --------- common classes --------- */
+.tittle {
+    margin-bottom: 20px;
+    font: 30px/32px $RWSB;
+    color: $gray;
+    text-align: center;
+    text-transform: capitalize;
+
+    transform: translateY(-10px);
+    opacity: 0;
+    transition: all 1s;
+}
+
+.sub-tittle {
+    width: 65%;
+    margin: 0 auto;
+    font-family: $ML;
+    line-height: 28px;
+    text-align: center;
+
+    transform: translateY(10px);
+    opacity: 0;
+    transition: all 1s;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1.42em 2.8em;
+    font: 14px/1.01 $RWEB;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    box-shadow: inset 0 -0.2em 0 #736357;
+    border-radius: 0.2em;
+    background-color: #998675;
+    transition: .2s;
+
+    &:hover {
+        box-shadow: inset 0 -4.3em 0 #736357;
+    }
+}
+
+/* --------- adjustment --------- */
+
+@import "_misc/mixins";
+@import "_misc/fonts";
+@import "_misc/adjustment";
+@import "_misc/_sprite";
+
+/* --------- common --------- */
+
+@import "_common/_header";
+@import "_common/_footer";
+@import "_common/_navigation";
+@import "_common/_menu";
+@import "_common/_social";
+@import "_common/_logo";
+@import "_common/_slider";
+@import "_common/_checkbox";
+
+/* --------- sections --------- */
+
+// @import "_sections/**/*";
+

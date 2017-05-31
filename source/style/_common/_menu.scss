@@ -1,0 +1,41 @@
+.menu_tabs {
+    display: inline-block;
+    margin-top: 40px;
+
+    .menu__item {
+        margin-right: 10px;
+        border-radius: 3px;
+        border: 1px solid #ebebeb;
+        display: inline-block;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        @include phones {
+            margin-bottom: 10px;
+        }
+
+        &.active .menu__link {
+            color: #fff;
+            background: #9a8776;
+            border-color: #9a8776;
+        }
+    }
+
+    .menu__link {
+        display: block;
+        padding: 10px 27px;
+        font: 14px/16px $ML;
+        color: $gray-light;
+        text-decoration: none;
+        text-transform: capitalize;
+        border-radius: 3px;
+
+        &:hover {
+            color: #fff;
+            background: #9a8776;
+            border-color: #9a8776;
+        }
+    }
+}

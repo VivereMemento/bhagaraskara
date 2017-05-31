@@ -1,0 +1,40 @@
+footer.footer
+    .footer__top
+        .container
+            .footer__top-inner
+                .footer__blocks
+                    +logo(waxom, "footer__logo_margin")
+                    p.footer__text
+                        | Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci suscipit lobortis claritatem.
+                    a.footer__link(href="#") Read more
+                .footer__blocks
+                    .footer__tittle Recent posts
+                    a.footer__post-link(href="#")
+                        .footer__post-date September 08, 2015
+                        .footer__text
+                            | Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+                    a.footer__post-link(href="#")
+                        .footer__post-date September 08, 2015
+                        .footer__text
+                            | Diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+                    a.footer__post-link(href="#")
+                        .footer__post-date September 08, 2015
+                        .footer__text
+                            | Claritas est etiam processus dynamicus, qui sequitur mutationem per seacula quarta decima
+
+                .footer__blocks
+                    .footer__tittle Stay connected
+                    include ./_social
+                    .subscribe
+                        | Subscribe <span>in</span> our news letter
+                        form.subscribe__form
+                            input.subscribe__form-input(name="" type="text" placeholder="Enter your email address")
+                            input.subscribe__form-submit(name="" type="submit" value="Subscribe")
+    .footer__bottom
+        .container
+            .footer__bottom-inner
+                .footer__copyright
+                    | Copyright © 2015 Waxom
+                .fotter__designed
+                    | Designed by ThemeFire
+            

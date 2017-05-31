@@ -1,0 +1,118 @@
+.nav {
+    width: 100%;
+    padding-top: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+
+    @include tablets {
+        padding: 10px 0;
+        background: #000;
+        position: fixed;
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__trigger {
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        display: none;
+
+        .fa-bars {
+            color: #fff;
+        }
+
+        @include tablets {
+            display: block;
+        }
+    }
+
+    &__list {
+        font-size: 0;
+
+        @include tablets {
+            width: 100%;
+            padding: 30px;
+            background: fade-out(#000, .5);
+            position: absolute;
+            top: 58px;
+            left: 0;
+            overflow: hidden;
+            transform: translateY(-150%);
+            opacity: 0;
+            transition: opacity .3s;
+        }
+    }
+
+    &__list.opened {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    &__item {
+        display: inline-block;
+        margin-right: 30px;
+
+        @include tablets {
+            display: block;
+            margin: 0;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid $gray;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &.active .nav__link {
+            color: #c7b299;
+        }
+    }
+
+    &__link {
+        display: block;
+        font: 14px/16px $ML;
+        color: #fff;
+        text-decoration: none;
+
+        &:hover {
+            color: #c7b299;
+        }
+    }
+}
+
+.nav__user {
+
+    &-item {
+        display: inline-block;
+        margin-right: 28px;
+        overflow: hidden;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &-link {
+        display: block;
+        width: 18px;
+        height: 24px;
+        fill: #fff;
+
+        &:hover .nav__user-img {
+            fill: #c7b299;
+        }
+    }
+
+    &-img {
+        width: 100%;
+        height: 100%;
+    }
+}

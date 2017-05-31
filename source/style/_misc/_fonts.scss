@@ -1,0 +1,26 @@
+// Existence
+
+@font-face {
+	@include fonts('../fonts/Existence/existence-light-webfont', 'existence-light');
+}
+
+
+// Lato
+
+@font-face {
+	@include fonts('../fonts/Lato/lato-bold-webfont', 'lato-bold');
+}
+
+@font-face {
+	@include fonts('../fonts/Lato/lato-regular-webfont', 'lato-regular');
+}
+
+// Open Sans
+
+@font-face {
+	@include fonts('../fonts/Open_Sans/opensans-bold-webfont', 'opensans-bold');
+}
+
+@font-face {
+	@include fonts('../fonts/Open_Sans/opensans-regular-webfont', 'opensans-regular');
+}

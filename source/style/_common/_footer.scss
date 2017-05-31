@@ -1,0 +1,144 @@
+.footer {
+    background: #111111;
+// ***** footer top ***** //
+    &__top {
+        padding: 80px 0;
+        background: #191919;
+    }
+
+    &__top-inner {
+        display: flex;
+        justify-content: space-between;
+
+        @include phones {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__blocks {
+        width: 30%;
+
+        @include phones {
+            width: 100%;
+        }
+
+        &:last-child {
+            @include phones {
+                margin-bottom: 20px;
+                order: 1;
+            }
+        }
+    }
+
+    &__logo_margin {
+        margin-bottom: 30px;
+    }
+
+    &__text {
+        font: 14px/24px $ML;
+        color: $gray;
+    }
+
+    &__link {
+        @extend .posts__content-link;
+        color: #d1d1d1 !important;
+
+        &:hover {
+            border-color: #fff !important;
+        }
+    }
+
+    &__tittle {
+        margin-top: 20px;
+        margin-bottom: 33px;
+        font: 24px/26px $RWB;
+        color: #ffffff;
+    }
+
+    &__post-link {
+        display: block;
+        margin-bottom: 42px;
+        text-decoration: none;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &:hover {
+            .footer__post-date {
+                color: #fff;
+            }
+
+            .footer__text {
+                color: #c7b299;
+            }
+        }
+    }
+
+    &__post-date {
+        font: 12px/14px $ML;
+        color: #363636;
+    }
+}
+
+.subscribe {
+    @extend .footer__tittle;
+    word-spacing: 5px;
+    margin-bottom: 0;
+    margin-top: 45px;
+
+    span {
+        text-transform: lowercase;
+    }
+
+    &__form {
+        width: 100%;
+        height: 40px;
+        margin-top: 54px;
+        position: relative;
+
+        &-input {
+            width: 100%;
+            height: 100%;
+            padding: 15px 120px 15px 22px;
+            font: 12px/14px $RR;
+            color: #6a6a6a;
+            border: 1px solid $gray;
+            background: transparent;
+            outline: 0;
+        }
+
+        &-submit {
+            width: 100px;
+            height: 34px;
+            border: none;
+            font: 12px/14px $RR;
+            color: #fff;
+            text-transform: uppercase;
+            background-color: #323030;
+            position: absolute;
+            top: 3px;
+            right: 3px;
+            cursor: pointer;
+            outline: 0;
+
+            &:hover {
+                background: #730808;
+            }
+        }
+    }
+}
+
+
+// ***** footer bottom ***** //
+
+.footer__bottom-inner {
+    padding-top: 45px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__copyright, .fotter__designed {
+    font: 13px/15px $ML;
+    color: $gray;
+}

@@ -1,0 +1,22 @@
+nav.nav
+	.container
+		.nav__inner
+			.nav__trigger
+				<i class="fa fa-bars" aria-hidden="true"></i>
+			+logo("Waxom", false)
+			- 
+				var items = ["Home", "About", "Portfolio", "Features", "Blog", "Pricing", "Shortcodes", "Contact"]
+			ul.nav__list
+				each item in items
+					li(class="nav__item" + ((item == "Home") ? ' ' + 'active' : ''))
+						a(href="#" class="nav__link") #{item}
+			.nav__user
+				#cart.nav__user-item
+					a.nav__user-link(href="#")
+						svg.nav__user-img
+							use(xlink:href="./assets/img/sprite.svg#cart@4x")
+				#search.nav__user-item
+					a.nav__user-link(href="#")
+						svg.nav__user-img
+							use(xlink:href="./assets/img/sprite.svg#search@4x")
+		

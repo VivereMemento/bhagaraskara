@@ -1,0 +1,113 @@
+
+//- ************************************************************ //
+//-                     COMMON MIXINS
+//- ************************************************************ //
+
+//- ----------- logo -------------- //
+
+mixin logo(text, mods)
+    div(class="logo " + ((mods === false) ? "" : mods))
+        a.logo__link(href="#")
+            img.logo__img(src="assets/img/logo.png")
+            .logo__text=text
+
+//- ----------- checkbox -------------- //
+
+mixin checkbox(text)
+    label.checkbox
+        input.checkbox__input(name="location" type="radio")
+        .checkbox__elem
+        .checkbox__text= text
+
+//- ----------- menu -------------- //
+
+mixin menu(array, active, mods)
+    ul(class="menu__list " + mods)
+        each item in array
+            li(class="menu__item " + (item === active ? "active" : ""))
+                a(class="menu__link" href="#")=item
+
+//- ----------- slideshow -------------- //
+
+mixin slideshow(array, id)
+    .slideshow__display
+        ul(id="" + (id !== "") ? id : "").slideshow__list
+            each item in array
+                li.slideshow__item.fade
+                    img.slideshow__img(src="" + item.url alt="slide")
+                    if array == wallProduct
+                        .description.wall__description_mods
+                            .description-text #{item.text}
+                            .description-price(data-sale="" + item.sale class="" + ((item.sale !== "") ? 'description-price_color' + '' : '')) #{item.price}  
+        div.dots
+            span(class="dot")
+            span(class="dot")
+            span(class="dot")
+            span(class="dot")
+
+//- ************************************************************ //
+//-                     PRIVATE MIXINS
+//- ************************************************************ // 
+
+//- ----------- heading-text -------------- //
+
+mixin heading-text()
+    .pre-heading
+        | Unique and Modern Design
+    .heading
+        | Portfolio PSD Template
+    .sub-heading
+        | Nam liber tempor cum soluta nobis eleifend option congue nihil imper-<br />diet doming id quod mazim placerat facer possim assum.
+
+//- ----------- sub-tittles -------------- //
+
+mixin subtittles(section)
+    if section === "realization"
+        .sub-tittle
+            | Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.
+            
+    if section === "projects"
+        .sub-tittle
+            | Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.
+            
+    if section === "video"
+        .sub-tittle.video__sub-tittle_mods
+            | Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius, qui sequitur mutationem consuetudium.
+    if section === "responsive"
+        .sub-tittle.responsive__sub-tittle_mods
+            | Qisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius claritas. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
+    if section === "posts"
+        .sub-tittle
+            | Qisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+
+//- ----------- service -------------- //
+
+mixin service-list()
+
+    -
+        var items = [
+                {tittle: "Web & App Design", src: "#web"},
+                {tittle: "Development", src: "#dev"},
+                {tittle: "Customization", src: "#custom"},
+                {tittle: "Marketing", src: "#market"}
+            ]
+    ul.service__list
+        each item in items
+            li.service__item
+                a.service__link(href="#")
+                    figure.service__img-wrap
+                        svg.service__img
+                            use(xlink:href="./assets/img/sprite.svg" + item.src)
+                        figcaption.service__description
+                            .service__tittle #{item.tittle}
+                            .service__text
+                                if item.tittle === "Web & App Design"
+                                    | Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim.
+                                if item.tittle === "Development"
+                                    | Lorem ipsum dolor sit amet, adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.
+                                if item.tittle === "Customization"
+                                    | Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim.
+                                if item.tittle === "Marketing"
+                                    | Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim.
+
+    
