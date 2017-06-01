@@ -1,1 +1,26 @@
 header.header
+    .container
+        +logo(bhagaskara, false)
+        .heading
+            +heading-text
+
+        -
+            var items = [
+                {link1: "About", src1: "about",
+                link2: "Team", src2: "team"},
+                {link1: "Services", src1: "services",
+                link2: "Portfolio", src2: "portfolio"},
+                {link1: "Blog", src1: "blog",
+                link2: "Contact", src2: "contact"}
+            ];
+
+        nav.header__nav
+            ul.header__nav-list
+                each item in items
+                    li.header__nav-item
+                        a.header__nav-link(href="#" data-text="" + item.link1)
+                            +nav-svg(item.src1)
+                        a.header__nav-link(href="#" data-text="" + item.link2)
+                            +nav-svg(item.src2)
+        a.header__link-down(href="#")
+            +nav-svg(false)

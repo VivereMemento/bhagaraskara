@@ -6,6 +6,5 @@ module.exports = [
   './node_modules/gsap/src/minified/plugins/CSSRulePlugin.min.js',
   './node_modules/gsap/src/minified/easing/EasePack.min.js',
   './node_modules/gsap/src/minified/TimelineMax.min.js',
-  './node_modules/gsap/src/minified/TweenMax.min.js',
-  './node_modules/bxslider/dist/jquery.bxslider.min.js'
+  './node_modules/gsap/src/minified/TweenMax.min.js'
 ];

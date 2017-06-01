@@ -43,7 +43,6 @@
     "rimraf": "2.5.2"
   },
   "dependencies": {
-    "bxslider": "^4.2.11",
     "gsap": "^1.19.1",
     "jquery": "^3.1.1",
     "normalize.css": "^4.1.1",

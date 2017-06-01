@@ -2,6 +2,7 @@ $responsive: true;
 
 /* --------- variables --------- */
 $EL: 'existence-light', sans-serif;
+$LL: 'lato-light', sans-serif;
 $LR: 'lato-regular', sans-serif;
 $LB: 'lato-bold', sans-serif;
 $OR: 'opensans-regular', sans-serif;
@@ -12,9 +13,14 @@ $gray-light: #8c8c8c;
 $black: #000000;
 
 /* --------- common classes --------- */
+
+.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#A86280;}
+    .st1{fill:#010202;}
+
+
 .tittle {
     margin-bottom: 20px;
-    font: 30px/32px $RWSB;
+    // font: 30px/32px $RWSB;
     color: $gray;
     text-align: center;
     text-transform: capitalize;
@@ -27,7 +33,7 @@ $black: #000000;
 .sub-tittle {
     width: 65%;
     margin: 0 auto;
-    font-family: $ML;
+    // font-family: $ML;
     line-height: 28px;
     text-align: center;
 
@@ -39,7 +45,7 @@ $black: #000000;
 .btn {
     display: inline-block;
     padding: 1.42em 2.8em;
-    font: 14px/1.01 $RWEB;
+    // font: 14px/1.01 $RWEB;
     color: #fff;
     text-transform: uppercase;
     text-decoration: none;

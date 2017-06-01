@@ -6,13 +6,12 @@
 
 
 // Lato
-
 @font-face {
-	@include fonts('../fonts/Lato/lato-bold-webfont', 'lato-bold');
+	@include fonts('../fonts/Lato/lato-regular-webfont', 'lato-regular');
 }
 
 @font-face {
-	@include fonts('../fonts/Lato/lato-regular-webfont', 'lato-regular');
+	@include fonts('../fonts/Lato/lato-bold-webfont', 'lato-bold');
 }
 
 // Open Sans
