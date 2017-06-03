@@ -1,6 +1,18 @@
 extends ../_template
 
 block variables
-  - var title = 'Home'
+	- var title = 'Home'
 
 block content
+	section.menu
+		.container
+			.menu__inner
+				+logo("Bhagaskara", "logo_footer.png", "menu__logo_mods")
+				-
+					var menuItems = ["Home", "About", "Team", "Services", "Portfolio", "Blog", "Contact"];
+
+				+menu(menuItems, "About", false)
+
+	section.feature
+		.container
+			+feature-list

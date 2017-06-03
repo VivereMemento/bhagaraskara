@@ -1,11 +1,20 @@
-.menu_tabs {
-    display: inline-block;
-    margin-top: 40px;
+.menu {
+    padding-top: 46px;
+    padding-bottom: 37px;
 
-    .menu__item {
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .menu__logo_mods {
+        max-width: 161px;
+        max-height: 38px;
+    }
+
+    &__item {
         margin-right: 10px;
-        border-radius: 3px;
-        border: 1px solid #ebebeb;
         display: inline-block;
 
         &:last-child {
@@ -17,25 +26,34 @@
         }
 
         &.active .menu__link {
-            color: #fff;
-            background: #9a8776;
-            border-color: #9a8776;
+            color: $violet;
         }
     }
 
-    .menu__link {
+    &__link {
         display: block;
-        padding: 10px 27px;
-        // font: 14px/16px $ML;
-        color: $gray-light;
+        font: 18px/20px 'Lato', sans-serif;;
+        color: $gray;
         text-decoration: none;
-        text-transform: capitalize;
-        border-radius: 3px;
+        text-transform: uppercase;
 
         &:hover {
-            color: #fff;
-            background: #9a8776;
-            border-color: #9a8776;
+            color: $violet;
         }
     }
+}
+
+.fixed {
+    width: 100%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background: #fff;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index: 1;
+}
+
+.shadow {
+   box-shadow: 0px 7px 17px -2px rgba(117,117,117,1);
 }

@@ -139,9 +139,31 @@
         right: 0;
         bottom: 0;
         left: 0;
+        animation: flash 1s ease-in infinite;
     }
 
     &:hover .header__svg-bg {
         fill: red;
+    }
+}
+
+
+@keyframes flash {
+    0% {
+        top: -15px;
+        opacity: 0
+    }
+
+    50% {
+        opacity: 1
+    }
+
+    75% {
+        opacity: 1
+    }
+
+    100% {
+        top: 12px;
+        opacity: 0;
     }
 }

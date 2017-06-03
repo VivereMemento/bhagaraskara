@@ -39,16 +39,16 @@
     left: -9999px;
 
     &:checked + .checkbox__elem {
-        border-color: $black;
+        border-color: #000;
 
         &:after {
             width: 16px;
             height: 16px;
-            background: $black;
+            background: #000;
         }
     }
 
     &:checked + .checkbox__elem + .checkbox__text {
-        color: $black;
+        color: #000;
     }
 }

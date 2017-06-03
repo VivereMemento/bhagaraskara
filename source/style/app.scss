@@ -8,9 +8,8 @@ $LB: 'lato-bold', sans-serif;
 $OR: 'opensans-regular', sans-serif;
 $OB: 'opensans-bold', sans-serif;
 
-$gray: #555555;
-$gray-light: #8c8c8c;
-$black: #000000;
+$gray: #676767;
+$violet: #9f449b;
 
 /* --------- common classes --------- */
 
@@ -80,4 +79,5 @@ $black: #000000;
 /* --------- sections --------- */
 
 // @import "_sections/**/*";
+@import "_sections/_feature";
 

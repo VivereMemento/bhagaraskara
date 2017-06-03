@@ -1,6 +1,6 @@
 header.header
     .container
-        +logo(bhagaskara, false)
+        +logo(bhagaskara, "logo.png", "header__logo")
         .heading
             h1.heading__text
                 | Fusce rutrum pretium lorem semper nulla.
@@ -22,8 +22,8 @@ header.header
                 each item in items
                     li.header__nav-item
                         a.header__nav-link(href="#" data-text="" + item.link1)
-                            +nav-svg(item.src1)
+                            +header-svg(item.src1)
                         a.header__nav-link(href="#" data-text="" + item.link2)
-                            +nav-svg(item.src2)
+                            +header-svg(item.src2)
         a.header__link-down(href="#")
-            +nav-svg(false)
+            +header-svg(false)
