@@ -1,0 +1,18 @@
+.teach {
+	background: url('../img/teach_bg.png') no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+
+	&__img {
+		display: inline-block;
+		width: 136px;
+        height: 149px;
+	}
+
+	&__tittle {
+		margin-top: 35px;
+		font: 48px/50px $LL;
+		color: #ffffff;
+	}
+}

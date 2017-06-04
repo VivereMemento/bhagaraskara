@@ -1,0 +1,66 @@
+.team {
+
+	.team__list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		
+	}
+
+	&__img-wrap {
+		display: inline-block;
+		width: 200px;
+		height: 200px;
+		max-width: 250px;
+		max-height: 250px;
+		background: $violet;
+		border-radius: 50%;
+	}
+
+	&__member {
+		margin-top: 50px;
+		font: 24px/26px $LL;
+		color: #484848;
+		text-transform: uppercase;
+	}
+
+	&__prof {
+		margin-top: 15px;
+	}
+
+	.owl-stage-outer {
+		order: 1;
+
+		@include phones {
+			margin-top: 50px;
+		}
+	}
+
+	.owl-nav {
+		margin: 100px 0;
+		order: 0;
+
+		@include phones {
+			display: none;
+		}
+
+		.owl-next, .owl-prev {
+			display: inline-block;
+			width: 30px;
+			height: 32px;
+			text-indent: -99999px;
+			background-size: cover;
+			background-position:  center;
+			background-repeat: no-repeat;
+		}
+
+		.owl-next {
+			background-image: url(../img/next.png);
+		}
+
+		.owl-prev {
+			margin-right: 5px;
+			background-image: url(../img/prev.png);
+		}
+	}
+}

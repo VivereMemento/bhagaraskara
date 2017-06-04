@@ -6,7 +6,6 @@ const headerAnimation = (function() {
 
     const _setUpListners = function() {
         window.addEventListener('load', initialSet);
-        // window.addEventListener('click', animatedLogo);
         window.addEventListener('scroll', debounce(animatedLogo));
     };
 
@@ -33,23 +32,24 @@ const headerAnimation = (function() {
           
 
     function initialSet() {
-        TweenMax.set(featureSvg, {opacity: 0, y: -100, rotation: 0});
-        TweenMax.set(featureSvgElements, {opacity: 0, y: -100});
+        TweenMax.set(featureSvg, {visibility: "hidden", opacity: 0, y: -100, rotation: 0});
+        TweenMax.set(featureSvgElements, {visibility: "hidden", opacity: 0, y: -100});
     }
 
     function animatedLogo () {
 
         const slideInAt = (window.scrollY + window.innerHeight) - section.clientHeight / 4;
-            // bottom of the image
+        // bottom of the section
         const bottomSection = section.offsetTop + section.clientHeight;
         const isHalfShown = slideInAt > section.offsetTop;
         const isNotScrolledPast = window.scrollY < bottomSection;
 
         if (isHalfShown && isNotScrolledPast) {
-            tl.staggerTo(featureSvg, 1, {opacity: 1, y: 0, ease:Bounce.easeOut}, 0.3)
-                .staggerTo(featureSvgElements, 1, {opacity: 1, y: 0, ease:Elastic.easeOut}, 0.3, '-=1.41');
+            tl.staggerTo(featureSvg, 1, {visibility: "visible", opacity: 1, y: 0, ease:Bounce.easeOut}, 0.3)
+                .staggerTo(featureSvgElements, 1, {visibility: "visible", opacity: 1, y: 0, ease:Elastic.easeOut}, 0.3, '-=1.41');
         } else {
-            section.classList.remove('action')
+            // TweenMax.set(featureSvg, {visibility: "hidden", opacity: 0, y: -100, rotation: 0});
+            // TweenMax.set(featureSvgElements, {visibility: "hidden", opacity: 0, y: -100});
         };  
 
     };

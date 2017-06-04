@@ -2,7 +2,7 @@ $responsive: true;
 
 /* --------- variables --------- */
 $EL: 'existence-light', sans-serif;
-$LL: 'lato-light', sans-serif;
+$LL: 'Lato', sans-serif;
 $LR: 'lato-regular', sans-serif;
 $LB: 'lato-bold', sans-serif;
 $OR: 'opensans-regular', sans-serif;
@@ -13,48 +13,52 @@ $violet: #9f449b;
 
 /* --------- common classes --------- */
 
-.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#A86280;}
-    .st1{fill:#010202;}
-
-
 .tittle {
+    display: inline-block;
     margin-bottom: 20px;
-    // font: 30px/32px $RWSB;
+    font: 48px/50px $EL;
     color: $gray;
-    text-align: center;
-    text-transform: capitalize;
+    position: relative;
 
-    transform: translateY(-10px);
-    opacity: 0;
-    transition: all 1s;
-}
+    &:before, &:after {
+        display: block;
+        content: "";
+        width: 28px;
+        height: 28px;
+        position: absolute;
+    }
 
-.sub-tittle {
-    width: 65%;
-    margin: 0 auto;
-    // font-family: $ML;
-    line-height: 28px;
-    text-align: center;
+    &:before {
+        bottom: -15px;
+        left: -20px;
+        border-bottom: 1px solid $violet;
+        border-left: 1px solid $violet;
+    }
 
-    transform: translateY(10px);
-    opacity: 0;
-    transition: all 1s;
+    &:after {
+        top: -10px;
+        right: -20px;
+        border-top: 1px solid $violet;
+        border-right: 1px solid $violet;
+    }
+
+    &_color {
+        color: $violet
+    }
 }
 
 .btn {
     display: inline-block;
     padding: 1.42em 2.8em;
-    // font: 14px/1.01 $RWEB;
     color: #fff;
-    text-transform: uppercase;
     text-decoration: none;
-    box-shadow: inset 0 -0.2em 0 #736357;
+    box-shadow: inset 0 -0.2em 0 darken($violet, 20%);
     border-radius: 0.2em;
-    background-color: #998675;
+    background-color: $violet;
     transition: .2s;
 
     &:hover {
-        box-shadow: inset 0 -4.3em 0 #736357;
+        box-shadow: inset 0 -4.3em 0 darken($violet, 20%);
     }
 }
 
@@ -80,4 +84,7 @@ $violet: #9f449b;
 
 // @import "_sections/**/*";
 @import "_sections/_feature";
+@import "_sections/_about";
+@import "_sections/_teach";
+@import "_sections/_team";
 

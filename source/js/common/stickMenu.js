@@ -3,7 +3,7 @@ $(document).ready(function() {
     var navPos, winPos, navHeight;
         
     function refreshVar() {
-        navPos = $('.menu').offset().top;
+        navPos = $('.menu').offset().top + 20;
         navHeight = $('.menu').outerHeight(true);
     }
 

@@ -16,3 +16,47 @@ block content
 	section.feature
 		.container
 			+feature-list
+
+	section.about
+		.container
+			.tittle
+				| About <span class="tittle_color">us</span>
+			.about__inner
+				.about__content
+					span.about__content-text
+						| Aliquam metus neque, bibendum sit amet porta at, consequat et enim. In ut turpis non ipsum rhoncus porttitor vel ac nunc. Maecenas interdum dignissim lorem quis auctor. Donec sit amet nulla nisl, aliquam pretium ipsum. Pellentesque sodales ipsum et enim rutrum adipiscing. Quisque tincidunt mattis sapien, vel posuere.
+					a.btn.about__btn_margin(href="#")
+						| Learn more
+
+	section.teach
+		.container
+			.teach__img
+				+header-svg("hat")
+			.teach__tittle
+				| We lorem and ipsum your aliquam
+
+	section.team
+		.container
+			.tittle
+				| Our <span class="tittle_color">team</span>
+			.team__inner
+				-
+					var items = [
+						{src: "", member: "Anne Hathaway", prof: "CEO / Marketing Guru"},
+						{src: "", member: "Anne Hathaway", prof: "CEO / Marketing Guru"},
+						{src: "", member: "Anne Hathaway", prof: "CEO / Marketing Guru"},
+						{src: "", member: "Anne Hathaway", prof: "CEO / Marketing Guru"},
+						{src: "", member: "Anne Hathaway", prof: "CEO / Marketing Guru"},
+						{src: "", member: "Anne Hathaway", prof: "CEO / Marketing Guru"},
+						{src: "", member: "Anne Hathaway", prof: "CEO / Marketing Guru"}
+					];
+
+				ul.team__list.owl-carousel
+					each item in items
+						li.team__item
+							figure
+								.team__img-wrap
+									img.team__img(src=" " + item.src)
+								figcapture
+									.team__member #{item.member}
+									.team__prof #{item.prof}
