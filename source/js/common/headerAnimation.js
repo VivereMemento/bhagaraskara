@@ -5,7 +5,7 @@ const headerAnimation = (function() {
     };
 
     const _setUpListners = function() {
-        window.addEventListener('load', onLoad);
+        window.addEventListener('load', _onLoad);
     };
 
     const tl = new TimelineMax(),
@@ -16,17 +16,17 @@ const headerAnimation = (function() {
           subHeading = document.querySelector('.subheading__text'),
           logo = document.querySelector('.header__logo');
 
-    function onLoad() {
+    function _onLoad() {
         TweenMax.set(logo, {x:"-1000px"});
         TweenMax.set([heading, subHeading], {opacity: 0, y:"-30px"});
         TweenMax.set(navItems, {opacity: 0});
         TweenMax.set(trig, {opacity: 0, y: "100px"});
         tl.to(logo, 3, {x: 0, ease:Elastic.easeOut})
             .to(heading, 1, {opacity: 1, y: 0, ease:Linear.easeNone}, "-=1")
-            .to(subHeading, 1, {opacity: 1, y: 0, ease:Linear.easeNone, onComplete: animatedLogo});
+            .to(subHeading, 1, {opacity: 1, y: 0, ease:Linear.easeNone, onComplete: _animatedLogo});
     }
 
-    function animatedLogo () {
+    function _animatedLogo () {
         const items = document.querySelectorAll('.header__svg');
         items.forEach(item => {
             item.classList.add('action');

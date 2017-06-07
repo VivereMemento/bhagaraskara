@@ -1,21 +1,29 @@
-$(document).ready(function() {
- 
-    var navPos, winPos, navHeight;
+const stickMenu = (function() {
+
+    const init = function() {
+        _setUpListners();
+    };
+
+    const _setUpListners = function() {
+        $(window).on('scroll', _stick);
+        $(window).on('resize', _refreshVar);
         
-    function refreshVar() {
-        navPos = $('.menu').offset().top + 20;
-        navHeight = $('.menu').outerHeight(true);
+    };
+
+    var menuPos, winPos, menuHeight;
+        
+    function _refreshVar() {
+        menuPos = $('.menu').offset().top + 20;
+        menuHeight = $('.menu').outerHeight(true);
     }
 
-    refreshVar();
-    $(window).resize(refreshVar);
+    $('<div class="clone-menu"></div>').insertBefore($('.menu')).css('height', menuHeight).hide();
+    _refreshVar();
 
-        $('<div class="clone-menu"></div>').insertBefore($('.menu')).css('height', navHeight).hide();
-        
-    $(window).scroll(function() {
+    function _stick() {
         winPos = $(window).scrollTop();
         
-        if (winPos >= navPos) {
+        if (winPos >= menuPos) {
             $('.menu').addClass('fixed shadow');  
             $('.clone-menu').show();
         }  
@@ -23,6 +31,12 @@ $(document).ready(function() {
             $('.menu').removeClass('fixed shadow');
             $('.clone-menu').hide();
         }
-    });
+    };
 
-});
+    
+    return {
+        init: init
+    }
+
+})();
+stickMenu.init();

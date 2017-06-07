@@ -3,22 +3,51 @@
 	&__inner {
 		margin-top: 80px;
 		display: flex;
-		justify-content: flex-end;
-		background: url('../img/about_bg.jpg') no-repeat top left;
-		background-size: contain;
+		justify-content: space-between;
+
+		@include phones {
+			flex-wrap: wrap;
+		}
+	}
+
+	&__img-wrap {
+		width: 58%;
+
+		@include phones {
+			width: 100%;
+			margin-bottom: 15px;
+		}
+	}
+
+	&__img {
+		display: block;
 	}
 
 	&__content {
 		width: 40%;
 		text-align: left;
+		position: relative;
+
+		@include phones {
+			width: 100%;
+		}
 
 		&-text {
 			display: block;
-			line-height: 36px;
+			line-height: 33px;
 		}
 	}
 
-	&__btn_margin {
-		margin-top: 120px;
+	&__btn_postion {
+		position: absolute;
+		bottom: 2px;
+		left: 0;
+
+		// margin-top: 120px;
+
+		@include phones {
+			margin-top: 20px;
+			position: relative;
+		}
 	}
 }

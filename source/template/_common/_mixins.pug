@@ -22,7 +22,7 @@ mixin checkbox(text)
 //- ----------- menu -------------- //
 
 mixin menu(array, active, mods)
-    ul(class="menu__list " + mods)
+    ul(class="menu__list" + mods)
         each item in array
             li(class="menu__item " + (item === active ? "active" : ""))
                 a(class="menu__link" href="#")=item

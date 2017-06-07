@@ -7,5 +7,8 @@ module.exports = [
   './node_modules/gsap/src/minified/easing/EasePack.min.js',
   './node_modules/gsap/src/minified/TimelineMax.min.js',
   './node_modules/gsap/src/minified/TweenMax.min.js',
+  './node_modules/scrollmagic/scrollmagic/minified/ScrollMagic.min.js',
+  './node_modules/scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js',
+  './node_modules/scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js',
   './node_modules/owl.carousel/dist/owl.carousel.min.js'
 ];

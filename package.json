@@ -41,7 +41,8 @@
     "gulp-svgmin": "^1.2.2",
     "gulp.spritesmith": "^6.3.0",
     "owl.carousel": "^2.2.0",
-    "rimraf": "2.5.2"
+    "rimraf": "2.5.2",
+    "scrollmagic": "^2.0.5"
   },
   "dependencies": {
     "gsap": "^1.19.1",

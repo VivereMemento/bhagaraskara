@@ -1,0 +1,54 @@
+.skills {
+
+	&__inner {
+		width: 80%;
+		margin: 0 auto;
+		margin-top: 100px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	&__content {
+		width: 45%;
+		margin-bottom: 35px;
+		text-align: left;
+	}
+
+	&__name {
+		margin-bottom: 15px;
+		color: #222222;
+		text-transform: uppercase;
+		position: relative;
+
+		@include phones {
+			font-size: 10px;
+		}
+
+		&:after {
+			display: block;
+			content: attr(data-progress);
+			color: #777777;
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+	}
+
+	&__progress {
+		width: 100%;
+		height: 20px;
+		background-color: #f0f0f0;
+		position: relative;
+
+		&-line {
+			width: 80%;
+			height: 100%;
+			background: $violet;
+			position: absolute;
+			top: 0;
+			left: 0;
+			transition: .7s ease;
+		}
+	}
+}

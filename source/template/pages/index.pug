@@ -10,8 +10,9 @@ block content
 				+logo("Bhagaskara", "logo_footer.png", "menu__logo_mods")
 				-
 					var menuItems = ["Home", "About", "Team", "Services", "Portfolio", "Blog", "Contact"];
-
-				+menu(menuItems, "About", false)
+				.menu__trigger
+					<i class="fa fa-bars" aria-hidden="true"></i>
+				+menu(menuItems, "About", "")
 
 	section.feature
 		.container
@@ -22,10 +23,12 @@ block content
 			.tittle
 				| About <span class="tittle_color">us</span>
 			.about__inner
+				.about__img-wrap
+					img.about__img(src="./assets/img/about_bg.jpg")
 				.about__content
 					span.about__content-text
 						| Aliquam metus neque, bibendum sit amet porta at, consequat et enim. In ut turpis non ipsum rhoncus porttitor vel ac nunc. Maecenas interdum dignissim lorem quis auctor. Donec sit amet nulla nisl, aliquam pretium ipsum. Pellentesque sodales ipsum et enim rutrum adipiscing. Quisque tincidunt mattis sapien, vel posuere.
-					a.btn.about__btn_margin(href="#")
+					a.btn.about__btn_postion(href="#")
 						| Learn more
 
 	section.teach
@@ -60,3 +63,28 @@ block content
 								figcapture
 									.team__member #{item.member}
 									.team__prof #{item.prof}
+	//- skills
+	section.skills
+		.container
+			.tittle
+				| Our <span class="tittle_color">skills</span>
+			.skills__inner
+				-
+					var skills = [
+						{name: "Web design", progress: "90%"},
+						{name: "Graphic design", progress: "70%"},
+						{name: "Html /Css", progress: "75%"},
+						{name: "Ui / Ux", progress: "85%"}
+					];
+				each skill in skills
+					.skills__content
+						.skills__name(data-progress="" + skill.progress) #{skill.name}
+						.skills__progress
+							.skills__progress-line(data-progress="" + skill.progress)
+
+	section.teach
+		.container
+			.teach__img
+				+header-svg("hat")
+			.teach__tittle
+				| We lorem and ipsum your aliquam
